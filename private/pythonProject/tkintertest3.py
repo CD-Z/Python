@@ -24,8 +24,9 @@ class Ball:
 
     def draw(self):
         if self.get_y() > 10:
-            self.canvas.move(self.id, 0, -1)
+            self.canvas.move(self.id, 1, -1)
         else:
+
             self.canvas.move(self.id, 1, 0)
         #self.canvas.after(10, self.draw)
 

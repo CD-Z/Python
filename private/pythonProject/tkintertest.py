@@ -6,7 +6,6 @@ x = 10
 
 
 def paint(event):
-    print(event)
     python_green = "#476042"
     x1, y1 = (event.x - 10), (event.y - 10)
     x2, y2 = (event.x + 20), (event.y + 10)
