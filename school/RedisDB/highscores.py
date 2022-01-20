@@ -5,7 +5,7 @@ from tkinter import *
 
 # r = redis.StrictRedis(host='10.115.2.20', port=6379, db=0, charset='utf-8', decode_responses=True)
 r = redis.StrictRedis(host='192.168.0.145', port=6379, db=0, charset='utf-8', decode_responses=True,
-                      password="Pat-02los20")
+                      password="")
 
 master = Tk()
 
