@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/school/BDDA_4JG_4.1_Cassandra_Startup/cassandra-set-example.py" dialect="GenericSQL" />
+  </component>
+</project>
