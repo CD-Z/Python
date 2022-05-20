@@ -1,4 +1,5 @@
 import pandas as pd
+import matplotlib.pyplot as plt
 
 
 def getting_started():
@@ -75,6 +76,23 @@ def change_data():
     end_function()
 
 
+def remove_duplicates():
+    df = pd.read_csv('dirtydata.csv')
+    df.drop_duplicates(inplace=True)
+    print(df.to_string())
+    end_function()
+
+
+def data_corr():
+    df = pd.read_csv('data.csv')
+    print(df.corr())
+    df.corr().plot()
+    df.plot(y=['Calories', 'Duration'])
+    df.plot(y=['Pulse', 'Maxpulse'])
+    plt.show()
+    end_function()
+
+
 def end_function():
     print("-----------------------------------------------------")
 
@@ -88,4 +106,6 @@ if __name__ == "__main__":
     # read_csv_data()
     # read_json_data()
     # cleaning_empty_cells()
-    change_data()
+    # change_data()
+    # remove_duplicates()
+    data_corr()
