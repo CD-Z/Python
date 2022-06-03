@@ -2,12 +2,12 @@ import pandas as pd
 
 
 def getting_started():
-    mydataset = {
+    my_data_set = {
         'cars': ["BMW", "Volvo", "Ford"],
         'passings': [3, 7, 2]
     }
 
-    myvar = pd.DataFrame(mydataset)
+    myvar = pd.DataFrame(my_data_set)
 
     print(myvar)
     end_function()
@@ -22,9 +22,9 @@ def series():
 
 def labels():
     a = [1, 7, 2]
-    myvar = pd.Series(a, index=["x", "y", "z"])
-    print(myvar)
-    print(myvar["y"])
+    my_var = pd.Series(a, index=["x", "y", "z"])
+    print(my_var)
+    print(my_var["y"])
     end_function()
 
 
@@ -40,8 +40,8 @@ def data_frame():
         "calories": [420, 380, 390],
         "duration": [50, 40, 45]
     }
-    myvar = pd.DataFrame(data)
-    print(myvar)
+    my_var = pd.DataFrame(data)
+    print(my_var)
     end_function()
 
 
