@@ -1,10 +1,10 @@
 from tkinter import *
-from tkinterflow import *       # ! Very important, put this right after import of tkinter functions
+from tkinterflow import *  # ! Very important, put this right after import of tkinter functions
 
 
 def t_flow():
     root = Tk()
-    my_frame = Frame(root)                 # Very Important!, you cannot use .flow() methods in root
+    my_frame = Frame(root)  # Very Important!, you cannot use .flow() methods in root
     my_frame.pack(fill=BOTH, expand=True)  # Very Important!, frame must stick to parent container walls
 
     button1 = Button(my_frame, text="----Button1---")
@@ -43,25 +43,24 @@ def t_pack():
 
 
 def t_flow2():
-
     root = Tk()
 
-    buttons=[]
+    buttons = []
 
-    myframe=Frame(root)
+    my_frame = Frame(root)
 
-    myframe.pack(fill=BOTH, expand=True)
+    my_frame.pack(fill=BOTH, expand=True)
 
-    button1=Button(myframe, text="---Place---",command = lambda: organizeWidgetsWithPlace(myframe))
+    button1 = Button(my_frame, text="---Place---", command=lambda: organizeWidgetsWithPlace(my_frame))
     button1.pack()
 
-    button2=Button(myframe, text="Grid",command = lambda: organizeWidgetsWithGrid(myframe))
+    button2 = Button(my_frame, text="Grid", command=lambda: organizeWidgetsWithGrid(my_frame))
     button2.pack()
 
-    button3=Button(myframe, text="Stop Organizing", command = lambda: stopOrganizingWidgets(myframe))
+    button3 = Button(my_frame, text="Stop Organizing", command=lambda: stopOrganizingWidgets(my_frame))
 
     for i in range(10):
-        buttons.append(Button(myframe, text="button"+str(i)))
+        buttons.append(Button(my_frame, text="button" + str(i)))
 
     root.mainloop()
 
@@ -70,4 +69,3 @@ if __name__ == "__main__":
     # t_pack()
     # t_flow()
     t_flow2()
-
