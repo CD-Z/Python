@@ -15,16 +15,16 @@ def make_input():
     return num
 
 
-def getFactorial(num):
+def get_factorial(num):
     factorial = range(1, num + 1)
     if num == 0:
         return 1
-    return reduce(lambda x, y: x*y, factorial)
+    return reduce(lambda x, y: x * y, factorial)
 
 
 def write_factorial():
     num = make_input()
-    print(f"calculated result for number {num} = {getFactorial(num)}")
+    print(f"calculated result for number {num} = {get_factorial(num)}")
 
 
 write_factorial()
@@ -34,8 +34,8 @@ write_factorial()
 r = redis.StrictRedis(host='10.115.2.20', port=6379, db=0, charset='utf-8', decode_responses=True)
 
 for i in range(1, 21):
-    r.set(f"fac-{i} ", getFactorial(i))
+    r.set(f"fac-{i} ", get_factorial(i))
 
 for i in range(1, 11):
-    print(f"get fac-{i} from Redis: "+r.get(f"fac-{i} "))
-print(f"get fac-20 from Redis: "+r.get(f"fac-20 "))
+    print(f"get fac-{i} from Redis: " + r.get(f"fac-{i} "))
+print(f"get fac-20 from Redis: " + r.get(f"fac-20 "))
